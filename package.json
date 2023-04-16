@@ -1,0 +1,38 @@
+{
+  "name": "ah-strapi",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^2.0.4",
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.7",
+    "@strapi/plugin-graphql": "^4.9",
+    "@strapi/plugin-i18n": "^4.9",
+    "@strapi/plugin-sentry": "^4.9",
+    "@strapi/plugin-seo": "^1.8.0",
+    "@strapi/plugin-users-permissions": "^4.9",
+    "@strapi/provider-email-sendgrid": "^4.9.1",
+    "@strapi/strapi": "^4.9",
+    "filter-button": "^0.2.2",
+    "mysql": "2.18.1",
+    "strapi-plugin-multi-select": "^1.1.0",
+    "strapi-plugin-rest-cache": "^4.2.7"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "c2348bba-b1cd-468d-a5ec-884e652179dc"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "filters",
+  "info": {
+    "singularName": "filter",
+    "pluralName": "filters",
+    "displayName": "Filter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Size",
+        "Medium",
+        "Theme"
+      ]
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}
