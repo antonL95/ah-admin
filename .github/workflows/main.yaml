@@ -29,6 +29,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
+            source /home/artistshero/.bashrc
             cd /home/artistshero/www/ah-admin/
             git pull
             npm ci
