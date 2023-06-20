@@ -33,6 +33,4 @@ jobs:
             cd /home/artistshero/www/ah-admin/
             git pull
             npm ci
-            npm run build
-            pm2 restart all
-          shell: bash
+            pm2 restart ah-strapi-admin
