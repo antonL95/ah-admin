@@ -19,6 +19,8 @@ jobs:
             export PATH="$PATH:/home/artistshero/.nvm/versions/node/v18.16.0/bin/"
             cd /home/artistshero/www/ah-admin/
             rm -rf node_modules/ dist/ .cache/ package-lock.json pnpm-lock.yaml yarn.lock
+            git fetch --all
+            git reset --hard HEAD
             git pull
             npm install
             NODE_ENV=production npm run build
