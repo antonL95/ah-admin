@@ -19,5 +19,6 @@ jobs:
             export PATH="$PATH:/home/artistshero/.nvm/versions/node/v18.16.0/bin/"
             cd /home/artistshero/www/ah-admin/
             git pull
-            npm ci
+            npm install
+            npm run build
             pm2 restart ah-strapi-admin

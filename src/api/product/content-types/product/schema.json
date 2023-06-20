@@ -52,12 +52,11 @@
           "localized": true
         }
       },
-      "type": "customField",
+      "type": "richtext",
       "options": {
         "output": "Markdown",
         "preset": "standard"
-      },
-      "customField": "plugin::ckeditor.CKEditor"
+      }
     },
     "filters": {
       "type": "relation",

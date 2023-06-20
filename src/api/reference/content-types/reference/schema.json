@@ -27,12 +27,11 @@
       "type": "string"
     },
     "description": {
-      "type": "customField",
+      "type": "richtext",
       "options": {
         "output": "Markdown",
         "preset": "standard"
-      },
-      "customField": "plugin::ckeditor.CKEditor"
+      }
     },
     "link": {
       "type": "string"

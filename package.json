@@ -10,19 +10,14 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@_sh/strapi-plugin-ckeditor": "^2.0.4",
-    "@ckeditor/strapi-plugin-ckeditor": "^0.0.7",
-    "@strapi/plugin-graphql": "^4.11.1",
     "@strapi/plugin-i18n": "^4.11.1",
     "@strapi/plugin-sentry": "^4.11.1",
-    "@strapi/plugin-seo": "^1.9.1",
     "@strapi/plugin-users-permissions": "^4.11.1",
     "@strapi/provider-email-sendgrid": "^4.11.1",
     "@strapi/provider-upload-aws-s3": "^4.11.1",
     "@strapi/strapi": "^4.11.1",
     "filter-button": "^0.2.2",
     "mysql": "2.18.1",
-    "strapi-plugin-multi-select": "^1.1.0",
     "strapi-plugin-rest-cache": "^4.2.7"
   },
   "author": {
