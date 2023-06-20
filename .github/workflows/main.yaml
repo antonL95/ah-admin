@@ -18,6 +18,7 @@ jobs:
           script: |
             export PATH="$PATH:/home/artistshero/.nvm/versions/node/v18.16.0/bin/"
             cd /home/artistshero/www/ah-admin/
+            rm -rf node_modules/ dist/ .cache/ package-lock.json pnpm-lock.yaml yarn.lock
             git pull
             npm install
             npm run build
