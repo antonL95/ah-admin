@@ -1,6 +1,7 @@
 export default [
   'strapi::errors',
-  {
+  'strapi::security',
+  /*{
     name: 'strapi::security',
     config: {
       contentSecurityPolicy: {
@@ -25,7 +26,7 @@ export default [
         },
       },
     },
-  },
+  },*/
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
