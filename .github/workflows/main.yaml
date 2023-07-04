@@ -24,4 +24,4 @@ jobs:
             git pull
             npm install
             NODE_ENV=production npm run build
-            pm2 restart ah-strapi-admin
+              pm2 restart ah-strapi-admin
