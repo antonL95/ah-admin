@@ -48,6 +48,9 @@ module.exports = ({env}) => ({
          * Check the cloudflare docs for the setup: https://developers.cloudflare.com/r2/data-access/public-buckets/#enable-public-access-for-your-bucket
          */
         cloudflarePublicAccessUrl: env("CF_PUBLIC_ACCESS_URL"),
+        localServer: {
+          maxage: 300000
+        },
       },
       actionOptions: {
         upload: {},
