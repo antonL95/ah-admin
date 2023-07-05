@@ -1,5 +1,6 @@
 // @ts-ignore
 import {getAbsoluteAdminUrl} from "@strapi/utils";
+require("dotenv").config({path: ".env"});
 
 export default {
   /**
@@ -19,6 +20,7 @@ export default {
    * run jobs, or perform some special logic.
    */
   async bootstrap({strapi}) {
+    // noinspection TypeScriptValidateJSTypes
     strapi.db.lifecycles.subscribe({
       models: ['admin::user'],
       async afterCreate(event) {
@@ -32,17 +34,21 @@ export default {
         const defaultFrom = emailSettings?.settings?.defaultFrom || 'Strapi <no-reply@strapi.io>';
         const defaultReplyTo = emailSettings?.settings?.defaultReplyTo || 'Strapi <no-reply@strapi.io>';
         const userPermissionService = strapi.plugin('users-permissions').service('users-permissions')
-        const inviteLink = `${getAbsoluteAdminUrl(strapi.config)}/auth/register?registrationToken=${registrationToken}`;
-
+        const inviteLink = `${process.env.ADMIN_URL}/auth/register?registrationToken=${registrationToken}`;
 
         const emailTemplate = {
           subject: 'Welcome <%= USER.firstname %>',
-          html: `<p>Hi <%= USER.firstname %>!</p>
-<p>You've been invited to a workspace. Please click on the link below to create your account.</p>
-<p><%= URL %></p>
-<p>Thanks.</p>`,
+          html: `
+                <p>Hi <%= USER.firstname %>!</p>
+                <p>You've been invited to a workspace. Please click on the link below to create your account.</p>
+                <p><%= URL %></p>
+                <p>Thanks.</p>`,
         }
 
+
+        emailTemplate.subject = await userPermissionService.template(emailTemplate.html, {
+          USER: result,
+        });
 
         emailTemplate.html = await userPermissionService.template(emailTemplate.html, {
           URL: inviteLink,
