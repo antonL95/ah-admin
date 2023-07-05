@@ -1,4 +1,4 @@
-name: Deploy to Linode
+name: Deploy to VH-server
 
 on:
   push:
