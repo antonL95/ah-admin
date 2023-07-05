@@ -46,7 +46,7 @@ export default {
         }
 
 
-        emailTemplate.subject = await userPermissionService.template(emailTemplate.html, {
+        emailTemplate.subject = await userPermissionService.template(emailTemplate.subject, {
           USER: result,
         });
 
