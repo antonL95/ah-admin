@@ -31,4 +31,38 @@ module.exports = ({env}) => ({
       },
     },
   },
+  'preview-button': {
+    config: {
+      injectListViewColumn: false,
+      openTarget: '_blank',
+      contentTypes: [
+        {
+          uid: 'api::artist.artist',
+          draft: {
+            url: 'http://localhost:3000/api/preview',
+            query: {
+              type: 'page',
+              id: '{id}'
+            },
+          },
+          published: {
+            url: 'http://localhost:3000/{slug}',
+          },
+        },
+        {
+          uid: 'api::product.product',
+          draft: {
+            url: 'http://localhost:3000/api/preview',
+            query: {
+              type: 'page',
+              id: '{id}'
+            },
+          },
+          published: {
+            url: 'http://localhost:3000/{slug}',
+          },
+        },
+      ],
+    },
+  },
 });
