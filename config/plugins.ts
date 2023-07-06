@@ -47,7 +47,7 @@ module.exports = ({env}) => ({
             },
           },
           published: {
-            url: env('PREVIEW_URL') + `/gallery/artists/{id}`,
+            url: env('PUBLISH_URL') + `/gallery/artists/{id}`,
             endpoint: 'artists',
           },
         },
@@ -62,7 +62,7 @@ module.exports = ({env}) => ({
             },
           },
           published: {
-            url: env('PREVIEW_URL') + `/gallery/artists/{id}`,
+            url: env('PUBLISH_URL') + `/gallery/artists/{id}`,
           },
         },
       ],
