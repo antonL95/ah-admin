@@ -39,27 +39,30 @@ module.exports = ({env}) => ({
         {
           uid: 'api::artist.artist',
           draft: {
-            url: 'http://localhost:3000/api/preview',
+            url: env('PREVIEW_URL'),
             query: {
-              type: 'page',
-              id: '{id}'
+              id: '{id}',
+              secret: env('PREVIEW_SECRET'),
+              endpoint: 'artists',
             },
           },
           published: {
-            url: 'http://localhost:3000/{slug}',
+            url: env('PREVIEW_URL') + `/gallery/artists/{id}`,
+            endpoint: 'artists',
           },
         },
         {
           uid: 'api::product.product',
           draft: {
-            url: 'http://localhost:3000/api/preview',
+            url: env('PREVIEW_URL'),
             query: {
-              type: 'page',
-              id: '{id}'
+              id: '{id}',
+              secret: env('PREVIEW_SECRET'),
+              endpoint: 'products',
             },
           },
           published: {
-            url: 'http://localhost:3000/{slug}',
+            url: env('PREVIEW_URL') + `/gallery/artists/{id}`,
           },
         },
       ],
