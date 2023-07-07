@@ -1,9 +1,14 @@
 module.exports = ({env}) => ({
   email: {
     config: {
-      provider: 'sendgrid',
+      provider: 'nodemailer',
       providerOptions: {
-        apiKey: env('SENDGRID_API_KEY'),
+        host: env('SMTP_HOST', 'smtp.example.com'),
+        port: env('SMTP_PORT', 587),
+        auth: {
+          user: env('SMTP_USERNAME'),
+          pass: env('SMTP_PASSWORD'),
+        },
       },
       settings: {
         defaultFrom: 'info@artistshero.com',
