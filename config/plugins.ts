@@ -69,7 +69,7 @@ module.exports = ({env}) => ({
             },
           },
           published: {
-            url: env('PUBLISH_URL') + `{locale}/gallery/artists/{id}`,
+            url: env('PUBLISH_URL') + `{locale}/gallery/products/{id}`,
           },
         },
       ],
